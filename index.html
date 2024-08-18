@@ -67,16 +67,9 @@
     </section>
     <footer>
         <p>&copy; 2024 Kat-Haus. Todos los derechos reservados.</p>
-        <p>Esta página ha sido visitada <span id="contador"></span> veces.</p>
+         
     </footer>
 
-    <script>
-        // Hacer una solicitud al archivo PHP para obtener el contador de visitas
-        fetch('contador.php')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('contador').textContent = data;
-            });
-    </script>
+
 </body>
 </html>
