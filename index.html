@@ -53,23 +53,30 @@
 <body>
     <header>
         <h1>Bienvenidos a Kat-Haus</h1>
-       <img src="https://i.imgur.com/MrVaXrHl.jpg" height=33% width=33%>
-        <p>La solución definitiva para el entretenimiento y confort de tus 🐱Michis🐱 </p>
+        <img src="https://i.imgur.com/MrVaXrHl.jpg" height=33% width=33%>
+        <p>La solución definitiva para el entretenimiento y confort de tus 🐱Michis🐱</p>
     </header>
     <section>
         <h2>Mejora la vida de tu felino hoy mismo</h2>
         <p>Descubre nuestros circuitos personalizados de escalada para gatos.</p>
-<div style="text-align: center;">
-    <a href="https://wa.me/593963372269?text=Hola%20Kat-Haus%20deseo%20hacer%20un%20pedido.">
-        <img src="https://www.dasegur.com/wp-content/uploads/2017/07/boton-hacer-pedido-dasegur.png" alt="¡Hacer Pedido!" style="width: 80%; height: 80%; border: none;">
-    </a>
-</div>
-
-</a>
-
+        <div style="text-align: center;">
+            <a href="https://wa.me/593963372269?text=Hola%20Kat-Haus%20deseo%20hacer%20un%20pedido.">
+                <img src="https://www.dasegur.com/wp-content/uploads/2017/07/boton-hacer-pedido-dasegur.png" alt="¡Hacer Pedido!" style="width: 80%; height: 80%; border: none;">
+            </a>
+        </div>
     </section>
     <footer>
         <p>&copy; 2024 Kat-Haus. Todos los derechos reservados.</p>
+        <p>Esta página ha sido visitada <span id="contador"></span> veces.</p>
     </footer>
+
+    <script>
+        // Hacer una solicitud al archivo PHP para obtener el contador de visitas
+        fetch('contador.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('contador').textContent = data;
+            });
+    </script>
 </body>
 </html>
