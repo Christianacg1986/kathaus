@@ -3,73 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kathaus - Bienvenidos</title>
+    <title>Redirigiendo a WhatsApp</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
             background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .countdown {
+            font-size: 2em;
+            margin: 20px 0;
             color: #333;
-        }
-        header {
-            background-color: #222;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 40px;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        p {
-            font-size: 1.2em;
-        }
-        .cta-button {
-            background-color: #ff4500;
-            color: #fff;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-        }
-        .cta-button:hover {
-            background-color: #e63e00;
-        }
-        footer {
-            background-color: #222;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Bienvenidos a Kat-Haus</h1>
-       <img src="https://i.imgur.com/MrVaXrHl.jpg" height=33% width=33%>
-        <p>La solución definitiva para el entretenimiento y confort de tus 🐱Michis🐱 </p>
-    </header>
-    <section>
-        <h2>Mejora la vida de tu felino hoy mismo</h2>
-        <p>Descubre nuestros circuitos personalizados de escalada para gatos.</p>
-<div style="text-align: center;">
-    <a href="https://wa.me/593963372269?text=Hola%20Kat-Haus%20deseo%20hacer%20un%20pedido.">
-        <img src="https://www.dasegur.com/wp-content/uploads/2017/07/boton-hacer-pedido-dasegur.png" alt="¡Hacer Pedido!" style="width: 30%; height: 30%; border: none;">
-    </a>
-</div>
+    <div class="container">
+        <h1>¡Hola!</h1>
+        <p>Estás a punto de ser redirigido a WhatsApp.</p>
+        <p class="countdown" id="countdown">Redirigiendo a WhatsApp en 3</p>
+    </div>
 
-</a>
+    <script>
+        function startCountdown(duration, display) {
+            var timer = duration, seconds;
+            var countdownInterval = setInterval(function () {
+                seconds = parseInt(timer % 60, 10);
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                display.textContent = "Redirigiendo a WhatsApp en " + seconds;
 
-    </section>
-    <footer>
-        <p>&copy; 2024 Kat-Haus. Todos los derechos reservados.</p>
-    </footer>
+                if (--timer < 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = "https://wa.me/593963372269?text=Hola%20Kat-Haus%20deseo%20hacer%20un%20pedido.";
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            var countdownTime = 3; // Duración de la cuenta regresiva en segundos
+            var display = document.querySelector('#countdown');
+            startCountdown(countdownTime, display);
+        };
+    </script>
 </body>
 </html>
