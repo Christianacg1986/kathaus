@@ -48,20 +48,34 @@
             padding: 20px;
             text-align: center;
         }
+
+        /* Animación para el parpadeo al ritmo de "Shave and a Haircut" */
+        @keyframes shaveHaircut {
+            0%, 12.5%, 25%, 37.5%, 50%, 62.5%, 75%, 100% {
+                opacity: 1;
+            }
+            6.25%, 18.75%, 31.25%, 43.75%, 56.25%, 68.75%, 81.25%, 93.75% {
+                opacity: 0;
+            }
+        }
+
+        .blinking-whatsapp {
+            animation: shaveHaircut 4s infinite;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Bienvenida <br>a Kat-Haus</h1>
+        <h1>Bienvenidos a Kat-Haus</h1>
         <img src="https://i.imgur.com/MrVaXrHl.jpg" height=33% width=33%>
-        <p>La solución definitiva para el entretenimiento y confort de tus <br> 🐱Michis🐱</p>
+        <p>La solución definitiva para el entretenimiento y confort de tus 🐱Michis🐱</p>
     </header>
     <section>
-        <h2>¡Mejora la vida de tu felino hoy mismo! </h2>
-        <p>Accede a nuestros Combos al precio especial que SOLO APLICA para compradores de Tiktok.</p>
+        <h2>Mejora la vida de tu felino hoy mismo</h2>
+        <p>Descubre nuestros circuitos personalizados de escalada para gatos.</p>
         <div style="text-align: center;">
             <a href="https://wa.me/593963372269?text=Hola%20Kat-Haus%20deseo%20hacer%20un%20pedido.">
-                <img src="https://www.dasegur.com/wp-content/uploads/2017/07/boton-hacer-pedido-dasegur.png" alt="¡Hacer Pedido!" style="width: 80%; height: 80%; border: none;">
+                <img src="https://www.dasegur.com/wp-content/uploads/2017/07/boton-hacer-pedido-dasegur.png" alt="¡Hacer Pedido!" style="width: 80%; height: 80%; border: none;" class="blinking-whatsapp">
             </a>
         </div>
     </section>
