@@ -149,5 +149,17 @@
     <audio autoplay loop>
         <source src="ruta_del_archivo/ElevenLabs_2024-08-18T21_10_37_Adam_pre_s50_sb75_se43_b_m2.mp3" type="audio/mpeg">
     </audio>
+
+    <!-- Script para el scroll automático -->
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: 'smooth'
+                });
+            }, 1000); // Espera 1 segundo antes de hacer scroll
+        };
+    </script>
 </body>
 </html>
