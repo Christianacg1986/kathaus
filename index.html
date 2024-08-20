@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenidos a Kat-Haus</title>
+    <title>Kat-Haus - Bienvenidos</title>
     <link href="https://fonts.googleapis.com/css2?family=Uchiyama:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -154,11 +154,23 @@
     <script>
         window.onload = function() {
             setTimeout(function() {
-                window.scrollTo({
-                    top: document.body.scrollHeight,
-                    behavior: 'smooth'
-                });
-            }, 1000); // Espera 1 segundo antes de hacer scroll
+                const scrollDuration = 6000; // Duración del scroll en milisegundos
+                const scrollHeight = document.body.scrollHeight;
+                const scrollStep = scrollHeight / (scrollDuration / 10);
+                let currentPosition = 0;
+                
+                function scroll() {
+                    if (currentPosition < scrollHeight) {
+                        window.scrollBy(0, scrollStep);
+                        currentPosition += scrollStep;
+                        requestAnimationFrame(scroll);
+                    } else {
+                        window.scrollTo(0, scrollHeight); // Asegura que llegue al final
+                    }
+                }
+
+                scroll();
+            }, 1000); // Espera 1 segundo antes de comenzar el scroll
         };
     </script>
 </body>
