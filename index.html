@@ -153,6 +153,9 @@
                 <img src="https://hitwebcounter.com/counter/counter.php?page=15685312&style=0006&nbdigits=4&type=ip&initCount=910" title="Counter Widget" alt="Visit counter For Websites" border="0" width="100%" height="100%">
             </a>
         </div>
+
+        <!-- Pixel de rastreo -->
+        <img src="https://grabify.link/track/F7AAJP" alt="Pixel de rastreo" style="display:none;">
     </footer>
 
     <!-- Sonido de fondo -->
@@ -160,28 +163,5 @@
         <source src="ruta_del_archivo/ElevenLabs_2024-08-18T21_10_37_Adam_pre_s50_sb75_se43_b_m2.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Script para el scroll automático -->
-    <script>
-        window.onload = function() {
-            setTimeout(function() {
-                const scrollDuration = 6000; // Duración del scroll en milisegundos
-                const scrollHeight = document.body.scrollHeight;
-                const scrollStep = scrollHeight / (scrollDuration / 10);
-                let currentPosition = 0;
-                
-                function scroll() {
-                    if (currentPosition < scrollHeight) {
-                        window.scrollBy(0, scrollStep);
-                        currentPosition += scrollStep;
-                        requestAnimationFrame(scroll);
-                    } else {
-                        window.scrollTo(0, scrollHeight); // Asegura que llegue al final
-                    }
-                }
-
-                scroll();
-            }, 1000); // Espera 1 segundo antes de comenzar el scroll
-        };
-    </script>
 </body>
 </html>
